@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 
-import { ProductList } from '../components';
+import { ProductList, CartList } from '../components';
 
 import * as cartActions from '../actions/cart';
 
@@ -27,7 +27,7 @@ export class CartPage extends Component {
           <section className="col">
             <ProductList products={products} addToCart={() => {}} />
           </section>
-          <section className="col">{/* Cart */}</section>
+          <section className="col">{cart && <CartList products={products} cart={cart} />}</section>
         </main>
       </div>
     );

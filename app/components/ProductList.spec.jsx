@@ -7,8 +7,8 @@ describe('<ProductList />', () => {
   it('should render a list of products', () => {
     // Given
     const products = [
-      { id: 1, name: 'A' },
-      { id: 2, name: 'B' },
+      { id: 1, name: 'Egg' },
+      { id: 2, name: 'Yolk' },
     ];
 
     const addToCart = jest.fn();
@@ -24,13 +24,13 @@ describe('<ProductList />', () => {
         .first()
         .find('span')
         .text()
-    ).toContain('A');
+    ).toContain('Egg');
     expect(
       listItems
         .at(1)
         .find('span')
         .text()
-    ).toContain('B');
+    ).toContain('Yolk');
   });
 
   it('should trigger addToCart with the right productId', () => {

@@ -1,10 +1,10 @@
 import React from 'react';
 import { shallow } from 'enzyme';
 
-import { CartPage, mapStateToProps } from './CartPage';
+import { CartPage } from './CartPage';
 
 describe('<CartPage />', () => {
-  const cart = [];
+  const cart = { id: 123, items: {} };
   const products = [];
 
   it('should start loading the cart when the cart page gets created', () => {
@@ -13,7 +13,7 @@ describe('<CartPage />', () => {
 
     // When
     const props = { cart, products, loadCart };
-    const render = shallow(<CartPage {...props} />);
+    shallow(<CartPage {...props} />);
 
     // Then
     expect(loadCart).toHaveBeenCalled();

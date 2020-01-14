@@ -1,10 +1,10 @@
 const productList = [
-  { name: 'A', id: 1, price: 12 },
-  { name: 'B', id: 2, price: 15 },
-  { name: 'C', id: 3, price: 50 },
+  { name: 'Bananas 🍌', id: 1, price: 12 },
+  { name: 'Peaches 🍑', id: 2, price: 15 },
+  { name: 'Eggplants 🍆', id: 3, price: 50 },
 ];
 
-function products(state = productList, action) {
+function products(state = productList) {
   return state;
 }
 
