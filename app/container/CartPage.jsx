@@ -12,7 +12,7 @@ export class CartPage extends Component {
   }
 
   render() {
-    const { isLoading, products, cart } = this.props;
+    const { isLoading, products, cart, addToCart } = this.props;
 
     if (isLoading) {
       return <div> Loading your cart </div>;
@@ -25,7 +25,7 @@ export class CartPage extends Component {
         </header>
         <main className="row">
           <section className="col">
-            <ProductList products={products} addToCart={() => {}} />
+            <ProductList products={products} addToCart={addToCart} />
           </section>
           <section className="col">{cart && <CartList products={products} cart={cart} />}</section>
         </main>
